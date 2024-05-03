@@ -442,7 +442,6 @@
 }
 
 .release-box-item {
-    padding: 8px 8px;
     text-align: left;
     border-radius: 4px;
     transition: background-color 0.15s;
@@ -579,6 +578,7 @@ a {
     display: flex;
     flex-direction: row;
     gap: 8px;
+    padding: 8px 8px;
 }
 
 .release-text {
