@@ -98,7 +98,7 @@
     </header>
     <div class="landing-container">
         <div class="landing">
-            <div class="landing-content">
+            <div class="landing-header">
                 <div class="content-1">
                     <span>
                         Voxel
@@ -120,17 +120,6 @@
 <!--                        repacks launcher app-->
                     </div>
                 </div>
-                <div class="content-mobile">
-                    <a data-i18n="mobileDiscord" class="discord-button" target="_blank" rel="noreferrer" href="https://discord.gg/hydralauncher">
-<!--                        Meet us on discord-->
-                    </a>
-                    <a data-i18n="mobileGithub" class="gh-button" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
-<!--                        View source code-->
-                    </a>
-                </div>
-                <div class="landing-banner-mobile">
-                    <img class="landing-img" src="./public/img/screenshot.png" alt="screenshot" />
-                </div>
                 <div class="content-3">
                     <div>
                         &quot<span data-i18n="descriptionOne"></span>
@@ -141,88 +130,97 @@
 <!--                        — and self-sufficient launcher&quot-->
                     </div>
                 </div>
-                <div>
-                    <div class="content-actions">
-                        <div class="download-shadow">
-                            <a id="download" class="download-left" target="_blank" rel="noreferrer" href="">
-<!--                                Download for Windows-->
-                            </a>
-                            <div class="release-button">
-                                <div onmouseover="spawnReleaseBox(); Menu.show()" id="download-2" class="download-right">
-                                    <img class="chevron-download" src="public/img/chevron-down.svg" alt="chevron" />
+            </div>
+            <div class="landing-content">
+                <div class="content-mobile">
+                    <a data-i18n="mobileDiscord" class="discord-button" target="_blank" rel="noreferrer" href="https://discord.gg/hydralauncher">
+<!--                        Meet us on discord-->
+                    </a>
+                    <a data-i18n="mobileGithub" class="gh-button" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+<!--                        View source code-->
+                    </a>
+                </div>
+                <div class="content-actions">
+                    <div class="download-shadow">
+                        <a id="download" class="download-left" target="_blank" rel="noreferrer" href="">
+<!--                            Download for Windows-->
+                        </a>
+                        <div class="release-button">
+                            <div onmouseover="spawnReleaseBox(); Menu.show()" id="download-2" class="download-right">
+                                <img class="chevron-download" src="public/img/chevron-down.svg" alt="chevron" />
+                            </div>
+                            <div id="release-box" class="release-box" onmouseleave="Menu.hide()">
+                                <div class="release-box-item">
+                                    <a id="release-exe" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                        <span class="os-icon-container">
+                                          <img class="os-icon" src="public/img/windows.svg" alt="releases" />
+                                        </span>
+                                        <span class="align-center flex release-text">
+                                          Hydra.exe
+                                        </span>
+                                    </a>
                                 </div>
-                                <div id="release-box" class="release-box" onmouseleave="Menu.hide()">
-                                    <div class="release-box-item">
-                                        <a id="release-exe" class="os-a" target="_blank" rel="noreferrer" href="/">
-                                            <span class="os-icon-container">
-                                              <img class="os-icon" src="public/img/windows.svg" alt="releases" />
-                                            </span>
-                                            <span class="align-center flex release-text">
-                                              Hydra.exe
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="release-box-item">
-                                        <a id="release-deb" class="os-a" target="_blank" rel="noreferrer" href="/">
-                                            <span class="os-icon-container">
-                                              <img class="os-icon" src="public/img/debian.svg" alt="releases" />
-                                            </span>
-                                            <span class="align-center flex release-text">
-                                              Hydra.deb
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="release-box-item">
-                                        <a id="release-rpm" class="os-a" target="_blank" rel="noreferrer" href="/">
-                                            <span class="os-icon-container">
-                                              <img class="os-icon" src="public/img/redhat.svg" alt="releases" />
-                                            </span>
-                                            <span class="align-center flex release-text">
-                                              Hydra.rpm
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <div class="release-box-item">
-                                        <a id="release-notes" class="os-a" target="_blank" rel="noreferrer" href="/">
-                                            <span class="os-icon-container">
-                                              <img class="os-icon" src="public/img/notes.svg" alt="releases" />
-                                            </span>
-                                            <span data-i18n="changeLog" class="align-center flex release-text">
-<!--                                              Changelog-->
-                                            </span>
-                                        </a>
-                                    </div>
+                                <div class="release-box-item">
+                                    <a id="release-deb" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                        <span class="os-icon-container">
+                                          <img class="os-icon" src="public/img/debian.svg" alt="releases" />
+                                        </span>
+                                        <span class="align-center flex release-text">
+                                          Hydra.deb
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="release-box-item">
+                                    <a id="release-rpm" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                        <span class="os-icon-container">
+                                          <img class="os-icon" src="public/img/redhat.svg" alt="releases" />
+                                        </span>
+                                        <span class="align-center flex release-text">
+                                          Hydra.rpm
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="release-box-item">
+                                    <a id="release-notes" class="os-a" target="_blank" rel="noreferrer" href="/">
+                                        <span class="os-icon-container">
+                                          <img class="os-icon" src="public/img/notes.svg" alt="releases" />
+                                        </span>
+                                        <span data-i18n="changeLog" class="align-center flex release-text">
+<!--                                           Changelog-->
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="source">
-                            <a data-i18n="sourceCodeButton" class="source-a content-a underscore" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
-<!--                                View Source Code-->
-                            </a>
-                        </div>
+                    </div>
+                    <div class="source">
+                        <a data-i18n="sourceCodeButton" class="source-a content-a underscore" target="_blank" rel="noreferrer" href="https://github.com/hydralauncher/hydra">
+<!--                               View Source Code-->
+                         </a>
                     </div>
                 </div>
-                <div class="info">
-                    <div class="info-item">
-                        <div data-i18n="cardOneTitle" class="info-head">
+            </div>
+            <div class="info">
+                <div class="info-item">
+                    <div data-i18n="cardOneTitle" class="info-head">
 <!--                            Free-->
-                        </div>
-                        <div class="info-content">
-                            <span data-i18n="cardOneTxtOne">
-<!--                                We-->
-                            </span>
-                            <span class="info-span">
-                                <span data-i18n="cardOneTxtTwo">
+                    </div>
+                    <div class="info-content">
+                        <span data-i18n="cardOneTxtOne">
+<!--                               We-->
+                           </span>
+                        <span class="info-span">
+                        <span data-i18n="cardOneTxtTwo">
 <!--                                    don't care-->
-                                </span>
                             </span>
-                            <span data-i18n="cardOneTxtThree">
+                        </span>
+                        <span data-i18n="cardOneTxtThree">
 <!--                                about-->
-                            </span>
-                            <br>
-                            <span data-i18n="cardOneTxtFour">
-<!--                                your-->
-                            </span>
+                        </span>
+                        <br>
+                        <span data-i18n="cardOneTxtFour">
+<!--                               your-->
+                        </span>
                             <span data-i18n="cardOneTxtFive" class="info-span">
 <!--                                money-->
                             </span>
@@ -260,9 +258,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="landing-banner">
-                <img class="landing-img" src="./public/img/screenshot.png" alt="screenshot" />
+                <div class="landing-banner">
+                    <img class="landing-img" src="./public/img/screenshot.png" alt="screenshot" />
+                </div>
             </div>
         </div>
     </div>
